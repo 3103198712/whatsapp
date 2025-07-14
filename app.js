@@ -17,7 +17,7 @@ app . use ( express . json ());
 app . get ( '/' , ( req , res ) => { const { 'hub.mode' : mode , 'hub.challenge' : challenge , 'hub.verify_token' : token } = req . query ;   
        
 
-  se ( modo === 'inscrever-se' && token === verifyToken ) { 
+  if ( modo === 'inscrever-se' && token === verifyToken ) { 
     console . log ( 'WEBHOOK VERIFICADO' ); 
     res . status ( 200 ). enviar ( desafio ); } senão { 
     res . status ( 403 ). fim (); } });    
